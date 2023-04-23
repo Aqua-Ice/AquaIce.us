@@ -23,12 +23,10 @@ jobs:
          - name: Build project
            run: npx gulp build
 
+         - name: Install dependencies (rsync and sshpass)
+           run: sudo apt-get install -y rsync sshpass
+
          - name: Deploy to server
-           uses: appleboy/scp-action@master
-           with:
-              host: ${{ secrets.SERVER_HOST }}
-              username: ${{ secrets.SERVER_USERNAME }}
-              password: ${{ secrets.SERVER_PASSWORD }}
-              port: ${{ secrets.SERVER_PORT }}
-              source: "dist/."
-              target: "/home/jcb/sites/test.aquaice.us"
+           run: |
+              sshpass -p ${{ secrets.SERVER_PASSWORD }} rsync -avz --delete --progress -e 'ssh -o StrictHostKeyChecking=no -p ${{ secrets.SERVER_PORT }}' dist/ ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/home/jcb/sites/test.aquaice.us
+           shell: bash
