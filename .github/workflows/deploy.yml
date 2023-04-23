@@ -30,7 +30,8 @@ jobs:
            run: |
               echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
               chmod 600 private_key
-              ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/authorized_keys
+              mkdir -p ~/.ssh
+              ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
          - name: Deploy to server
            run: |
