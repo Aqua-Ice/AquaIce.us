@@ -1,0 +1,16 @@
+footer.footer {
+    position: relative;
+    z-index: 3;
+    background: #22333b;
+    padding: 100px;
+    
+    a.link {
+        font-family: "Mouse Memoirs";
+        text-decoration: none;
+        display: block;
+        width:fit-content;
+        color: #fff;
+        font-size: 40px;
+        &:hover { text-decoration: underline }
+    }
+}

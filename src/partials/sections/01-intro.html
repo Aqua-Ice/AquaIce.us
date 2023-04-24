@@ -1,0 +1,32 @@
+<section class="intro">
+    <div class="container">
+        <div class="container-border">
+            @@loop("top-cup.html", [
+                { delay: ".5s", color: "#fffbae" },
+                { delay: "1s", color: "#602296" },
+                { delay: "1.5s", color: "#634627" },
+                { delay: "2s", color: "#f25f5f" },
+                { delay: "2.5s", color: "#395fff" },
+                { delay: "3s", color: "#9cff94" },
+                { delay: "3.5s", color: "#fbb03b" },
+                { delay: "4s", color: "#ed7499" },
+                { delay: "4.5s", color: "#ff8500" },
+                { delay: "5s", color: "#ffffff" },
+            ])
+        </div>
+        <div class="main-intro">
+            <img src="../assets/flavor-ss-1.png" alt="Stars & Stripes Aqua Ice" />
+            <div class="main-intro-text">
+                <h1>
+                    Creamy, refreshing
+                    <br/>
+                    <span class="gradient">Aqua Ice.</span>
+                </h1>
+            </div>
+        </div>
+        @@include('button.html', {
+            text: 'Get refreshed',
+            href: '#'
+        })
+    </div>
+</section>

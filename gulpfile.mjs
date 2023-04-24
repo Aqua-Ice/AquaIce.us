@@ -6,8 +6,8 @@ import cleanCSS from "gulp-clean-css"
 import rename from "gulp-rename"
 import dartSass from "sass"
 import browserSyncModule from "browser-sync"
-import gulpCached from "gulp-cached";
-import gulpRemember from "gulp-remember";
+import gulpCached from "gulp-cached"
+import gulpRemember from "gulp-remember"
 
 const browserSync = browserSyncModule.create()
 const sassCompiler = gulpSass(dartSass)
@@ -19,6 +19,8 @@ const buildHtml = () => {
 			fileInclude({
 				prefix: "@@",
 				basepath: "src/partials/",
+				recursive: true, // Recursively check partials
+				maxDepth: 3, // Limit the depth of recursion (adjust as needed)
 			})
 		)
 		.pipe(gulp.dest("dist"))
@@ -34,18 +36,18 @@ const buildStyles = () => {
 }
 
 const copyAssets = () => {
-    return gulp
-      .src("src/assets/**/*")
-      .pipe(gulpCached("assets")) // Cache the files
-      .pipe(gulpRemember("assets")) // Remember the files
-      .pipe(gulp.dest("dist/assets"))
-      .pipe(browserSync.stream());
-  };
+	return gulp
+		.src("src/assets/**/*")
+		.pipe(gulpCached("assets")) // Cache the files
+		.pipe(gulpRemember("assets")) // Remember the files
+		.pipe(gulp.dest("dist/assets"))
+		.pipe(browserSync.stream())
+}
 
 const watchFiles = () => {
 	watch("src/**/*.html", gulp.series(buildHtml, browserSync.reload))
 	watch("src/scss/**/*.scss", gulp.series(buildStyles, browserSync.reload))
-    watch("src/assets/**/*", gulp.series(copyAssets, browserSync.reload));
+	watch("src/assets/**/*", gulp.series(copyAssets, browserSync.reload))
 }
 
 const webserver = () => {

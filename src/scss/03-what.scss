@@ -1,0 +1,42 @@
+section.what {
+    border-top: solid 15px #fff;
+
+    position: relative;
+    z-index: 3; // to put it over the intro button
+    display: flex;
+    flex-wrap: nowrap;
+    div.container {
+        background: #22333b;
+        padding: 100px;
+        border-right: solid 15px #fff;
+        min-height: 700px;
+        flex-grow: 1;
+
+        h2 {
+            margin: 0;
+            font-family: "Mouse Memoirs";
+            font-size: 70px;
+            line-height: 60px;
+            color: #fff;
+            text-shadow: #0005 0px 6px;
+        }
+        h1 {
+            margin: 0;
+            font-family: "Mouse Memoirs";
+            font-size: 130px;
+            line-height: 100px;
+            color: #fff;
+            text-shadow: #0005 0px 6px;
+        }
+        p {
+            margin: 40px 0;
+            font-family: "Red Hat Display";
+            font-size: 30px;
+            color: #fff;
+            text-shadow: #0005 0px 4px;
+        }
+    }
+    img {
+        height: 700px;
+    }
+}

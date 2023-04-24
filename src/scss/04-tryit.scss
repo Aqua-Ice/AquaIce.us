@@ -1,0 +1,47 @@
+section.tryit {
+	border-top: solid 15px #fff;
+
+	position: relative;
+	z-index: 3; // to put it over the intro button
+	background: #fe938c;
+	padding: 120px;
+
+    text-align: center;
+
+	div.side-by-side {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+
+		h1 {
+			display: inline-block;
+			height: 100%;
+			margin: 0 50px;
+			font-family: "Mouse Memoirs";
+			font-size: 130px;
+			line-height: 100px;
+			color: #682423;
+		}
+		p {
+			display: inline-block;
+			height: 100%;
+			margin: 0 50px;
+			font-family: "Red Hat Display";
+            text-align: left;
+			font-size: 60px;
+			font-weight: 600;
+			line-height: 63px;
+            letter-spacing: 1px;
+			color: #682423;
+		}
+	}
+    a.btn {
+        background: linear-gradient(90deg, #a84f4d 10%, #682423 100%);
+        margin-top: 50px;
+        box-shadow:  10px 10px 40px #d87d77;
+        &:active {
+            box-shadow: inset 0px 10px 40px #0004;
+        }
+    }
+}

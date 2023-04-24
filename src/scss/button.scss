@@ -1,0 +1,21 @@
+a.btn {
+    display: inline-block;
+    padding: 14px 50px;
+    border-radius: 500px;
+
+    background: #4dc3c3;
+    background: linear-gradient(90deg, #4dc3c3 10%, #005c65 100%);
+
+    box-shadow:  10px 10px 40px #d9d9d9;
+
+    font-family: "Mouse Memoirs";
+    font-size: 45px;
+    color: #fff;
+    text-shadow: #0005 0px 4px;
+
+    text-decoration: none;
+
+    &:active {
+        box-shadow: inset 0px 10px 40px #0004;
+    }
+}
