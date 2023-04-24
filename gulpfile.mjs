@@ -44,10 +44,18 @@ const copyAssets = () => {
 		.pipe(browserSync.stream())
 }
 
+// copy JS
+const copyJs = () => {
+    return gulp
+        .src("src/js/**/*")
+        .pipe(gulp.dest("dist/js"))
+}
+
 const watchFiles = () => {
 	watch("src/**/*.html", gulp.series(buildHtml, browserSync.reload))
 	watch("src/scss/**/*.scss", gulp.series(buildStyles, browserSync.reload))
 	watch("src/assets/**/*", gulp.series(copyAssets, browserSync.reload))
+    watch("src/js/**/*", gulp.series(copyJs, browserSync.reload))
 }
 
 const webserver = () => {
@@ -59,6 +67,6 @@ const webserver = () => {
 	})
 }
 
-export const build = gulp.series(buildHtml, buildStyles, copyAssets)
-export const serve = gulp.series(buildHtml, buildStyles, copyAssets, gulp.parallel(webserver, watchFiles))
+export const build = gulp.series(buildHtml, buildStyles, copyAssets, copyJs)
+export const serve = gulp.series(buildHtml, buildStyles, copyAssets, copyJs, gulp.parallel(webserver, watchFiles))
 export default serve
