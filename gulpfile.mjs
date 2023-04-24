@@ -6,6 +6,8 @@ import cleanCSS from "gulp-clean-css"
 import rename from "gulp-rename"
 import dartSass from "sass"
 import browserSyncModule from "browser-sync"
+import gulpCached from "gulp-cached";
+import gulpRemember from "gulp-remember";
 
 const browserSync = browserSyncModule.create()
 const sassCompiler = gulpSass(dartSass)
@@ -31,9 +33,19 @@ const buildStyles = () => {
 		.pipe(gulp.dest("dist/css"))
 }
 
+const copyAssets = () => {
+    return gulp
+      .src("src/assets/**/*")
+      .pipe(gulpCached("assets")) // Cache the files
+      .pipe(gulpRemember("assets")) // Remember the files
+      .pipe(gulp.dest("dist/assets"))
+      .pipe(browserSync.stream());
+  };
+
 const watchFiles = () => {
 	watch("src/**/*.html", gulp.series(buildHtml, browserSync.reload))
 	watch("src/scss/**/*.scss", gulp.series(buildStyles, browserSync.reload))
+    watch("src/assets/**/*", gulp.series(copyAssets, browserSync.reload));
 }
 
 const webserver = () => {
@@ -45,6 +57,6 @@ const webserver = () => {
 	})
 }
 
-export const build = gulp.series(buildHtml, buildStyles)
-export const serve = gulp.series(buildHtml, buildStyles, gulp.parallel(webserver, watchFiles))
+export const build = gulp.series(buildHtml, buildStyles, copyAssets)
+export const serve = gulp.series(buildHtml, buildStyles, copyAssets, gulp.parallel(webserver, watchFiles))
 export default serve
