@@ -1,0 +1,84 @@
+section.intro {
+    background: #4dc3c3;
+
+    margin: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    // the main white part of the page
+    div.container {
+        background: #fff;
+        position: absolute;
+
+        width: calc(100% - 60px);
+        height: calc(100vh - 30px);
+
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        bottom: 0px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // the border of ice cups at the top
+    div.container-border {
+        position: absolute;
+        top: 60px;
+
+        width: 100%;
+
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+
+        svg {
+            height: 70px;
+            animation: cup-swing 5s infinite;
+        }
+    }
+
+    div.main-intro {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        img {
+            float: left;
+            height: 450px;
+            margin-right: 40px;
+        }
+        h1 {
+            display: inline-block;
+            text-align: left;
+            font-family: "Mouse Memoirs";
+            font-size: 130px;
+            line-height: 120px;
+
+            span.gradient {
+                background: linear-gradient(135deg, #4dc3c3 10%, #005c65 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    a.btn1 {
+        position: fixed;
+        bottom: 70px;
+        z-index: 1;
+    }
+}
+
+@keyframes cup-swing {
+    0% {
+        transform: rotate(-7deg);
+    }
+    50% {
+        transform: rotate(7deg);
+    }
+    100% {
+        transform: rotate(-7deg);
+    }
+}
