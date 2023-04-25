@@ -36,6 +36,14 @@ section.intro {
         justify-content: space-around;
 
         svg {
+            @media only screen and (max-width: 1400px) {
+                &:nth-child(odd) {
+                    display: none;
+                }
+            }
+            @media only screen and (max-width: 600px) {
+                display: none;
+            }
             height: 70px;
             animation: cup-swing 5s infinite;
         }
@@ -63,12 +71,48 @@ section.intro {
                 -webkit-text-fill-color: transparent;
             }
         }
+        @media only screen and (max-width: 1500px) {
+            img {
+                height: 300px;
+                margin-right: 25px;
+            }
+            h1 {
+                font-size: 80px;
+                line-height: 80px;
+            }
+        }
+        @media only screen and (max-width: 900px) {
+            display: inline-block;
+            text-align: center;
+            img {
+                display: none;
+                height: 150px;
+                margin: 10px auto;
+            }
+            h1 {
+                text-align: center;
+                font-size: 80px;
+                line-height: 80px;
+            }
+        }
     }
 
     a.btn {
         position: fixed;
         bottom: 70px;
         z-index: 1;
+
+        @media only screen and (max-width: 600px) {
+            bottom: 40px;
+            font-size: 32px;
+            padding: 12px 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header.fixed {
+        transform: none;
     }
 }
 

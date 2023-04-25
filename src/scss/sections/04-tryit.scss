@@ -44,4 +44,59 @@ section.tryit {
             box-shadow: inset 0px 10px 40px #0004;
         }
     }
+
+    @media only screen and (max-width: 2180px) {
+        padding: 60px;
+
+        div.side-by-side {
+            h1 {
+                font-size: 100px;
+                line-height: 80px;
+            }
+            p {
+                font-size: 40px;
+                line-height: 43px;
+            }
+        }
+        a.btn {
+            margin-top: 20px;
+            font-size: 30px;
+        }
+    }
+    @media only screen and (max-width: 1600px) {
+        padding: 60px 30px;
+
+        div.side-by-side {
+            display: block;
+            h1 {
+                margin: 0;
+                display: block;
+                width: 100%;
+                font-size: 100px;
+                line-height: 80px;
+            }
+            p {
+                margin: 20px 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 40px;
+                line-height: 43px;
+                br { display: none }
+            }
+        }
+    }
+    @media only screen and (max-width: 900px) {
+        div.side-by-side {
+            display: block;
+            h1 {
+                font-size: 70px;
+                line-height: 80px;
+            }
+            p {
+                font-size: 30px;
+                line-height: 35px;
+            }
+        }
+    }
 }
