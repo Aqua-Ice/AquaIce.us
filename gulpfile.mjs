@@ -23,6 +23,12 @@ const buildHtml = () => {
 				maxDepth: 3, // Limit the depth of recursion (adjust as needed)
 			})
 		)
+		.pipe(rename((path) => {
+			if (path.basename !== "index") {
+				path.dirname = path.basename;
+				path.basename = "index";
+			}
+		}))
 		.pipe(gulp.dest("dist"))
 }
 
