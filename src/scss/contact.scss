@@ -1,0 +1,39 @@
+section.contact {
+	padding: 80px;
+	text-align: center;
+
+	div.contact-card {
+		display: inline-block;
+		padding: 30px;
+		margin: 10px 70px;
+		div {
+            display: inline-block;
+			img {
+                display: block;
+                float: left;
+                margin-top: 7px;
+                margin-right: 10px;
+				height: 40px;
+			}
+			p {
+				display: block;
+                float: left;
+				font-family: "Red Hat Display";
+				font-weight: 900;
+				text-transform: uppercase;
+				margin: 0;
+				font-size: 40px;
+			}
+		}
+		a.info {
+            display: block;
+			font-family: "Red Hat Display";
+			font-weight: 300;
+			font-size: 45px;
+            text-decoration: none;
+            color: #000;
+			margin: 0;
+            &:hover { color: #344 }
+		}
+	}
+}

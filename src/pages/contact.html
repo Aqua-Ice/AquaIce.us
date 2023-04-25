@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Aqua Ice</title>
+
+		<link rel="stylesheet" href="/css/main.min.css" />
+		<link rel="stylesheet" href="/css/contact.min.css" />
+		<link rel="stylesheet" href="/css/head.min.css" />
+		<link rel="stylesheet" href="/css/button.min.css" />
+		<link rel="stylesheet" href="/css/footer.min.css" />
+	</head>
+	<body>
+		<main>
+			@@include('head.html', { "title": "Contact Us", "subtitle": "We'd love to hear from you!" })
+			<section class="contact">
+				<div class="contact-info">
+					<div class="contact-card contact-email">
+						<div>
+							<img src="../assets/icons/mail.svg" alt="Email" />
+							<p>Email</p>
+						</div>
+                        <a class="info" href="mailto:brad@aquaice.us">brad@aquaice.us</a>
+					</div>
+					<div class="contact-card contact-phone">
+						<div>
+							<img src="../assets/icons/phone.svg" alt="Email" />
+							<p>Phone</p>
+						</div>
+                        <a class="info" href="tel:4192702723">(419) 270-2723</a>
+					</div>
+				</div>
+			</section>
+            @@include('footer.html')
+		</main>
+	</body>
+</html>

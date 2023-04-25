@@ -59,6 +59,7 @@ section.intro {
             span.gradient {
                 background: linear-gradient(135deg, #4dc3c3 10%, #005c65 100%);
                 -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
         }
@@ -73,12 +74,12 @@ section.intro {
 
 @keyframes cup-swing {
     0% {
-        transform: rotate(-7deg);
+        transform: rotate(-12deg);
     }
     50% {
-        transform: rotate(7deg);
+        transform: rotate(12deg);
     }
     100% {
-        transform: rotate(-7deg);
+        transform: rotate(-12deg);
     }
 }
