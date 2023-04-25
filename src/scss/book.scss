@@ -1,7 +1,14 @@
 section.booking {
-	padding: 110px 20px;
+	padding: 60px 20px;
     padding-bottom: 60px;
 	text-align: center;
+
+    .package-title {
+        font-family: "Red Hat Display";
+        font-weight: 600;
+        font-size: 35px;
+        text-transform: uppercase;
+    }
 
     .booking-section {
         text-align: center;
