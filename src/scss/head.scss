@@ -46,4 +46,15 @@ section.head {
             line-height: 34px;
         }
     }
+    @media only screen and (max-width:420px) {
+        padding: 30px 15px;
+        h1 {
+            font-size: 85px;
+            line-height: 80px;
+        }
+        h2 {
+            font-size: 32px;
+            line-height: 28px;
+        }
+    }
 }

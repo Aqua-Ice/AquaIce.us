@@ -2,6 +2,10 @@ section.contact {
 	padding: 110px 15px;
 	text-align: center;
 
+    @media only screen and (max-width:420px) {
+        padding: 50px 15px;
+    }
+
 	div.contact-card {
 		display: inline-block;
 		padding: 30px;
@@ -47,11 +51,17 @@ section.contact {
         &.subtitle {
             line-height: 27px;
             font-size: 30px;
+            @media only screen and (max-width:420px) {
+                font-size: 23px;
+            }
         }
         &a:hover { color: #344 }
 
         @media only screen and (max-width: 600px) {
             font-size: 35px;
+        }
+        @media only screen and (max-width:420px) {
+            font-size: 28px;
         }
     }
 }
