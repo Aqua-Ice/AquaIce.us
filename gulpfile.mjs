@@ -12,6 +12,7 @@ import gulpRemember from "gulp-remember"
 const browserSync = browserSyncModule.create()
 const sassCompiler = gulpSass(dartSass)
 
+// compile HTML files and move them into their directories
 const buildHtml = () => {
 	return gulp
 		.src("src/pages/*.html")
@@ -32,6 +33,7 @@ const buildHtml = () => {
 		.pipe(gulp.dest("dist"))
 }
 
+// compile scss into css and minify
 const buildStyles = () => {
 	return gulp
 		.src("src/scss/**/*.scss")
@@ -41,6 +43,7 @@ const buildStyles = () => {
 		.pipe(gulp.dest("dist/css"))
 }
 
+// copy the assets into the dist folder
 const copyAssets = () => {
 	return gulp
 		.src("src/assets/**/*")
@@ -50,13 +53,14 @@ const copyAssets = () => {
 		.pipe(browserSync.stream())
 }
 
-// copy JS
+// copy JS into the dist folder
 const copyJs = () => {
     return gulp
         .src("src/js/**/*")
         .pipe(gulp.dest("dist/js"))
 }
 
+// watch for changes in the src folder
 const watchFiles = () => {
 	watch("src/**/*.html", gulp.series(buildHtml, browserSync.reload))
 	watch("src/scss/**/*.scss", gulp.series(buildStyles, browserSync.reload))
@@ -64,6 +68,7 @@ const watchFiles = () => {
     watch("src/js/**/*", gulp.series(copyJs, browserSync.reload))
 }
 
+// start the webserver
 const webserver = () => {
 	browserSync.init({
 		server: {
