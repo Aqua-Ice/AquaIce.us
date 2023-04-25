@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="./css/button.min.css">
     <link rel="stylesheet" href="./css/footer.min.css">
+    <link rel="stylesheet" href="/css/header.min.css" />
 
-    <link rel="stylesheet" href="./css/01-intro.min.css">
-    <link rel="stylesheet" href="./css/02-snowcones.min.css">
-    <link rel="stylesheet" href="./css/03-what.min.css">
-    <link rel="stylesheet" href="./css/04-tryit.min.css">
-    <link rel="stylesheet" href="./css/05-bookus.min.css">
+    <link rel="stylesheet" href="./css/sections/01-intro.min.css">
+    <link rel="stylesheet" href="./css/sections/02-snowcones.min.css">
+    <link rel="stylesheet" href="./css/sections/03-what.min.css">
+    <link rel="stylesheet" href="./css/sections/04-tryit.min.css">
+    <link rel="stylesheet" href="./css/sections/05-bookus.min.css">
 </head>
 <body>
     <main>
@@ -27,6 +28,7 @@
         @@include('sections/05-bookus.html')
         @@include('footer.html')
     </main>
+    @@include('header.html', { "fixed": "fixed" })
 
     <!-- In the future, minify -->
     <script src="./js/script.js" defer></script>
