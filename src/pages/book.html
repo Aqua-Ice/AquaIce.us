@@ -7,7 +7,7 @@
 		<title>Aqua Ice</title>
 
 		<link rel="stylesheet" href="/css/main.min.css" />
-		<link rel="stylesheet" href="/css/contact.min.css" />
+		<link rel="stylesheet" href="/css/book.min.css" />
 		<link rel="stylesheet" href="/css/header.min.css" />
 		<link rel="stylesheet" href="/css/head.min.css" />
 		<link rel="stylesheet" href="/css/button.min.css" />
@@ -17,20 +17,60 @@
 		<main>
             @@include('header.html', { "fixed": "" })
 			@@include('head.html', { "title": "Book Us", "subtitle": "" })
-			<section class="contact">
-                <p class="info">Brad Bloomer</p>
-                <p class="info subtitle">Manager</p>
+            <section class="booking">
+                <div class="booking-section">
+                    <div class="sidebyside">
+                        <img src="../assets/icons/confetti.svg"/>
+                        <p>Includes</p>
+                    </div>
+                    <p>
+                        <ul>
+                            <li>Your choice of 4 flavors from our current inventory</li>
+                            <li>An experienced server for 2 hours</li>
+                            <li>Free delivery within 30 miles of Delta, OH</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="booking-section">
+                    <div class="sidebyside">
+                        <img src="../assets/icons/plus.svg"/>
+                        <p>Add-ons</p>
+                    </div>
+                    <p>
+                        <ul>
+                            <li>Need more time? [$50 / half hour]</li>
+                            <li>Need 2 servers? [$60 / hour]</li>
+                            <li>Additional guests? [$1 each]</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="booking-section">
+                    <div class="sidebyside">
+                        <img src="../assets/icons/book.svg"/>
+                        <p>Policies</p>
+                    </div>
+                    <p>
+                        $200 deposit to reserve your event date, balance due on arrival
+                        <ul>
+                            <li>$150 of your deposit is refundable with 30+ days notice of cancellation</li>
+                            <li>$100 of your deposit is refundable with 15-19 days notice of cancellation</li>
+                            <li>No refunds within 14 days of event date</li>
+                        </ul>
+                        $0.50 / mile round trip
+                    </p>
+                </div>
+
 				<div class="contact-info">
 					<div class="contact-card contact-email">
 						<div class="sidebyside">
-							<img src="../assets/icons/mail.svg" alt="Email" />
+							<img src="../assets/icons/mail.svg" />
 							<p>Email</p>
 						</div>
                         <a class="info" href="mailto:brad@aquaice.us">brad@aquaice.us</a>
 					</div>
 					<div class="contact-card contact-phone">
 						<div class="sidebyside">
-							<img src="../assets/icons/phone.svg" alt="Phone" />
+							<img src="../assets/icons/phone.svg" />
 							<p>Phone</p>
 						</div>
                         <a class="info" href="tel:4192702723">(419) 270-2723</a>
