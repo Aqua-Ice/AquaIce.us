@@ -1,7 +1,7 @@
 section.head {
     position: relative;
     width: 100%;
-    padding: 100px;
+    padding: 100px 20px;
 
     background-image: url("../assets/stripe.svg");
     background-size: cover;
@@ -34,5 +34,16 @@ section.head {
         font-size: 60px;
         line-height: 50px;
         z-index: 3;
+    }
+    @media only screen and (max-width:650px) {
+        padding: 50px 15px;
+        h1 {
+            font-size: 110px;
+            line-height: 95px;
+        }
+        h2 {
+            font-size: 42px;
+            line-height: 34px;
+        }
     }
 }

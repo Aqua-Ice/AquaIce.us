@@ -1,11 +1,14 @@
 section.contact {
-	padding: 110px;
+	padding: 110px 15px;
 	text-align: center;
 
 	div.contact-card {
 		display: inline-block;
 		padding: 30px;
 		margin: 10px 70px;
+        @media only screen and (max-width: 600px) {
+            margin: 10px;
+        }
 	}
     div.sidebyside {
         display: inline-block;
@@ -25,6 +28,12 @@ section.contact {
             margin: 0;
             font-size: 40px;
         }
+        @media only screen and (max-width: 600px) {
+            img { height: 30px }
+            p {
+                font-size: 30px;
+            }
+        }
     }
     .info {
         display: block;
@@ -40,5 +49,9 @@ section.contact {
             font-size: 30px;
         }
         &a:hover { color: #344 }
+
+        @media only screen and (max-width: 600px) {
+            font-size: 35px;
+        }
     }
 }

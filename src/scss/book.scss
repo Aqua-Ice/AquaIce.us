@@ -1,6 +1,11 @@
 section.booking {
-	padding: 110px;
+	padding: 110px 20px;
+    padding-bottom: 60px;
 	text-align: center;
+
+    .booking-section {
+        text-align: center;
+    }
 
 	div.contact-card {
 		display: inline-block;
@@ -8,6 +13,7 @@ section.booking {
 		margin: 10px 70px;
 	}
     div.sidebyside {
+        margin-top: 30px;
         display: inline-block;
         img {
             display: block;
@@ -25,6 +31,23 @@ section.booking {
             margin: 0;
             font-size: 40px;
         }
+        @media only screen and (max-width: 500px) {
+            img {
+                height: 30px;
+            }
+            p {
+                font-size: 30px;
+            }
+        }
+    }
+    div.list {
+        margin: 10px auto;
+        text-align: left;
+        // display: inline-block;
+        width: 500px;
+        max-width: 100%;
+        font-family: "Red Hat Display";
+        font-size: 19px;
     }
     .info {
         display: block;
@@ -41,4 +64,7 @@ section.booking {
         }
         &a:hover { color: #344 }
     }
+}
+.contact-info {
+    margin-top: 80px;
 }
