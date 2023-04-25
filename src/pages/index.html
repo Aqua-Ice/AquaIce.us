@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqua Ice</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Aqua Ice - The Creamy, Non-Dairy Treat</title>
 
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
 
-    <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="stylesheet" href="./css/button.min.css">
-    <link rel="stylesheet" href="./css/footer.min.css">
-    <link rel="stylesheet" href="/css/header.min.css" />
+		<!-- OGP -->
+		<meta property="og:title" content="Aqua Ice - Home" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://aquaice.us/" />
+		<meta property="og:image" content="https://aquaice.us/assets/ogp.png" />
+		<meta property="og:description" content="The Creamy, Non-Dairy Treat" />
+		<meta property="og:site_name" content="Aqua Ice" />
+		<meta property="og:locale" content="en_US" />
 
-    <link rel="stylesheet" href="./css/sections/01-intro.min.css">
-    <link rel="stylesheet" href="./css/sections/02-snowcones.min.css">
-    <link rel="stylesheet" href="./css/sections/03-what.min.css">
-    <link rel="stylesheet" href="./css/sections/04-tryit.min.css">
-    <link rel="stylesheet" href="./css/sections/05-bookus.min.css">
-</head>
-<body>
-    <main>
-        @@include('sections/01-intro.html')
-        @@include('sections/02-snowcones.html')
-        @@include('sections/03-what.html')
-        @@include('sections/04-tryit.html')
-        @@include('sections/05-bookus.html')
-        @@include('footer.html')
-    </main>
-    @@include('header.html', { "fixed": "fixed" })
+		<link rel="stylesheet" href="./css/main.min.css" />
+		<link rel="stylesheet" href="./css/button.min.css" />
+		<link rel="stylesheet" href="./css/footer.min.css" />
+		<link rel="stylesheet" href="/css/header.min.css" />
 
-    <!-- In the future, minify -->
-    <script src="./js/script.js" defer></script>
-</body>
+		<link rel="stylesheet" href="./css/sections/01-intro.min.css" />
+		<link rel="stylesheet" href="./css/sections/02-snowcones.min.css" />
+		<link rel="stylesheet" href="./css/sections/03-what.min.css" />
+		<link rel="stylesheet" href="./css/sections/04-tryit.min.css" />
+		<link rel="stylesheet" href="./css/sections/05-bookus.min.css" />
+	</head>
+	<body>
+		<main>
+			@@include('sections/01-intro.html')
+            @@include('sections/02-snowcones.html')
+            @@include('sections/03-what.html')
+            @@include('sections/04-tryit.html')
+            @@include('sections/05-bookus.html')
+			@@include('footer.html')
+		</main>
+		@@include('header.html', { "fixed": "fixed" })
+
+		<!-- In the future, minify -->
+		<script src="./js/script.js" defer></script>
+	</body>
 </html>

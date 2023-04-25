@@ -4,7 +4,18 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Aqua Ice</title>
+		<title>Aqua Ice - Book Us</title>
+
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+		<!-- OGP -->
+		<meta property="og:title" content="Aqua Ice - Book Us" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://aquaice.us/book" />
+		<meta property="og:image" content="https://aquaice.us/assets/ogp.png" />
+		<meta property="og:description" content="We'd love to come scoop our delicious Italian Ice for your event, whether it's a wedding or a corporate event!" />
+		<meta property="og:site_name" content="Aqua Ice" />
+		<meta property="og:locale" content="en_US" />
 
 		<link rel="stylesheet" href="/css/main.min.css" />
 		<link rel="stylesheet" href="/css/book.min.css" />
@@ -15,59 +26,53 @@
 	</head>
 	<body>
 		<main>
-            @@include('header.html', { "fixed": "" })
-			@@include('head.html', { "title": "Book Us", "subtitle": "" })
-            <section class="booking">
-                <h1 class="package-title">Event Cart Package - $390</h1>
-                <div class="booking-section">
-                    <div class="sidebyside">
-                        <img src="../assets/icons/confetti.svg"/>
-                        <p>Includes</p>
-                    </div>
-                    <div class="list">
-                        <ul>
-                            <li>Your choice of 4 flavors from our current inventory</li>
-                            <li>An experienced server for 2 hours</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="booking-section">
-                    <div class="sidebyside">
-                        <img src="../assets/icons/plus.svg"/>
-                        <p>Add-ons</p>
-                    </div>
-                    <div class="list">
-                        <ul>
-                            <li>Need more time? [$50 / half hour]</li>
-                            <li>Need 2 servers? [$60 / hour]</li>
-                            <li>Additional guests? [$1 each]</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="booking-section">
-                    <div class="sidebyside">
-                        <img src="../assets/icons/book.svg"/>
-                        <p>Policies</p>
-                    </div>
-                    <div class="list">
-                        $200 deposit to reserve your event date, balance due on arrival
-                        <ul>
-                            <li>$150 of your deposit is refundable with 30+ days notice of cancellation</li>
-                            <li>$100 of your deposit is refundable with 15-19 days notice of cancellation</li>
-                            <li>No refunds within 14 days of event date</li>
-                        </ul>
-                        $0.50 charged per mile round trip from Delta, OH
-                    </div>
-                </div>
-
-				<div class="contact-info">
-					@@include('button.html', {
-                        text: 'Get in touch!',
-                        href: '/contact'
-                    })
+			@@include('header.html', { "fixed": "" }) @@include('head.html', { "title": "Book Us", "subtitle": "" })
+			<section class="booking">
+				<h1 class="package-title">Event Cart Package - $390</h1>
+				<div class="booking-section">
+					<div class="sidebyside">
+						<img src="../assets/icons/confetti.svg" />
+						<p>Includes</p>
+					</div>
+					<div class="list">
+						<ul>
+							<li>Your choice of 4 flavors from our current inventory</li>
+							<li>An experienced server for 2 hours</li>
+						</ul>
+					</div>
 				</div>
+				<div class="booking-section">
+					<div class="sidebyside">
+						<img src="../assets/icons/plus.svg" />
+						<p>Add-ons</p>
+					</div>
+					<div class="list">
+						<ul>
+							<li>Need more time? [$50 / half hour]</li>
+							<li>Need 2 servers? [$60 / hour]</li>
+							<li>Additional guests? [$1 each]</li>
+						</ul>
+					</div>
+				</div>
+				<div class="booking-section">
+					<div class="sidebyside">
+						<img src="../assets/icons/book.svg" />
+						<p>Policies</p>
+					</div>
+					<div class="list">
+						$200 deposit to reserve your event date, balance due on arrival
+						<ul>
+							<li>$150 of your deposit is refundable with 30+ days notice of cancellation</li>
+							<li>$100 of your deposit is refundable with 15-19 days notice of cancellation</li>
+							<li>No refunds within 14 days of event date</li>
+						</ul>
+						$0.50 charged per mile round trip from Delta, OH
+					</div>
+				</div>
+
+				<div class="contact-info">@@include('button.html', { text: 'Get in touch!', href: '/contact' })</div>
 			</section>
-            @@include('footer.html')
+			@@include('footer.html')
 		</main>
 	</body>
 </html>
