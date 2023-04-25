@@ -1,0 +1,55 @@
+header {
+    background: #22333b;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+
+        transition: transform .3s;
+        transform: translateY(-100%);
+        &.active {
+            transform: translateY(0);
+        }
+    }
+
+    div.header {
+        width: 100%;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    a.logo {
+        float: left;
+        img {
+            height: 100px;
+        }
+        &:hover { opacity: .9 }
+        &:active { opacity: .75 }
+    }
+    div.nav {
+        margin: 0;
+        margin-right: 30px;
+        float: right;
+        a {
+            margin: 0;
+            color: #fff;
+            text-decoration: none;
+            font-family: "Mouse Memoirs";
+            font-size: 45px;
+            padding: 0 10px;
+            padding-bottom: 12px;
+            margin: 0 10px;
+
+            &:hover { opacity: .9 }
+            &:active { opacity: .75 }
+        }
+    }
+}
