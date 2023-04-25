@@ -13,7 +13,7 @@ header {
 
 		transition: transform 0.3s;
 		transform: translateY(-100%);
-		&.active {
+		&.scrolled {
 			transform: translateY(0);
 		}
 	}

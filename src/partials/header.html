@@ -17,23 +17,23 @@
 </header>
 
 <script>
-    let header = document.querySelector("header")
-    let menuButton = header.querySelector("a.menu")
-    let closeButton = header.querySelector("a.close-button")
+    let header_header = document.querySelector("header")
+    let header_menuButton = header_header.querySelector("a.menu")
+    let header_closeButton = header_header.querySelector("a.close-button")
 
-    menuButton.addEventListener("click", e => {
+    header_menuButton.addEventListener("click", e => {
         e.preventDefault()
-        header.classList.add("active")
+        header_header.classList.add("active")
     })
 
-    closeButton.addEventListener("click", e => {
+    header_closeButton.addEventListener("click", e => {
         e.preventDefault()
-        header.classList.remove("active")
+        header_header.classList.remove("active")
     })
 
     window.addEventListener("resize", () => {
         if (window.innerWidth > 1000) {
-            header.classList.remove("active")
+            header_header.classList.remove("active")
         }
     })
 </script>

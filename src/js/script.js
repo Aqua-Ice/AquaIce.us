@@ -12,12 +12,8 @@ scrollButton.addEventListener("click", e => {
 })
 
 function onScroll() {
-    console.log(window.scrollY)
-    if (window.scrollY >= 50) {
-        header.classList.add("active")
-    } else {
-        header.classList.remove("active")
-    }
+    if (window.scrollY >= 50) header.classList.add("scrolled")
+    else header.classList.remove("scrolled")
 }
 window.addEventListener("scroll", onScroll)
 setInterval(onScroll, 1000)
