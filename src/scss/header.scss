@@ -1,55 +1,151 @@
 header {
-    background: #22333b;
-    display: inline-block;
-    width: 100%;
-    padding: 10px;
+	background: #22333b;
+	display: inline-block;
+	width: 100%;
+	padding: 10px;
 
-    &.fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 20;
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 20;
 
-        transition: transform .3s;
-        transform: translateY(-100%);
-        &.active {
-            transform: translateY(0);
+		transition: transform 0.3s;
+		transform: translateY(-100%);
+		&.active {
+			transform: translateY(0);
+		}
+	}
+
+	div.header {
+		width: 100%;
+		display: inline-flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	a.logo {
+		float: left;
+		img {
+			height: 100px;
+		}
+		&:hover {
+			opacity: 0.9;
+		}
+		&:active {
+			opacity: 0.75;
+		}
+	}
+	div.nav {
+		margin: 0;
+		margin-right: 30px;
+		float: right;
+		a {
+			margin: 0;
+			color: #fff;
+			text-decoration: none;
+			font-family: "Mouse Memoirs";
+			font-size: 45px;
+			padding: 0 10px;
+			padding-bottom: 12px;
+			margin: 0 10px;
+
+			&:hover {
+				opacity: 0.9;
+			}
+			&:active {
+				opacity: 0.75;
+			}
+		}
+	}
+	a.close-button, a.menu {
+		display: none;
+	}
+
+	@media only screen and (max-width: 1000px) {
+        a.logo img {
+            height: 80px;
         }
-    }
-
-    div.header {
-        width: 100%;
-        display: inline-flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    a.logo {
-        float: left;
-        img {
-            height: 100px;
+        div.nav {
+            margin-right: 0;
         }
-        &:hover { opacity: .9 }
-        &:active { opacity: .75 }
-    }
-    div.nav {
-        margin: 0;
-        margin-right: 30px;
-        float: right;
-        a {
-            margin: 0;
-            color: #fff;
-            text-decoration: none;
-            font-family: "Mouse Memoirs";
-            font-size: 45px;
-            padding: 0 10px;
-            padding-bottom: 12px;
-            margin: 0 10px;
+		div.nav a {
+			display: none;
+            &.menu {
+                display: block;
+                padding: 10px;
+                img { height: 45px }
+            }
+		}
+		&.active {
+            transform: none;
+            &.fixed {
+                transform: none;
+                &.active { transform: none }
+            }
 
-            &:hover { opacity: .9 }
-            &:active { opacity: .75 }
-        }
-    }
+            div.nav a.menu { display: none !important }
+
+			position: fixed;
+			text-align: center;
+			inset: 0;
+			z-index: 25;
+
+			div.header {
+				display: block;
+				text-align: center;
+				a.logo {
+					width: 100%;
+					margin: 10px auto;
+					float: none;
+					img {
+						height: auto;
+						width: 80%;
+						max-width: 600px;
+					}
+				}
+				div.nav {
+					margin-top: 50px;
+					float: none;
+					display: block;
+					a {
+						display: block;
+						width: 100%;
+						font-size: 60px;
+						padding: 16px;
+						@media only screen and (max-height: 750px) {
+							padding: 7px;
+							font-size: 45px;
+						}
+					}
+				}
+				a.close-button {
+					display: block;
+
+					position: absolute;
+					bottom: 25px;
+					left: 25px;
+					right: 25px;
+
+					border-radius: 5px;
+
+					background: #fff;
+					width: calc(100% - 50px);
+
+					text-decoration: none;
+					font-family: "Red Hat Display";
+					font-weight: 800;
+					font-size: 34px;
+					color: #22333b;
+
+					padding: 10px 16px;
+
+                    &:hover { opacity: .9 }
+                    &:active { opacity: .75 }
+				}
+			}
+		}
+	}
 }

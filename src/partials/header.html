@@ -1,6 +1,6 @@
 <header class="@@fixed">
     <div class="header">
-        <a class="logo" href="#">
+        <a class="logo" href="/">
             <img src="../assets/logos/whiteout.svg" alt="Aqua Ice" />
         </a>
         <div class="nav">
@@ -8,6 +8,32 @@
             <a href="/book">Book Us</a>
             <a href="#/events">Events</a>
             <a href="/contact">Contact</a>
+            <a href="javascript:void(0)" class="menu">
+                <img src="../assets/icons/menu.svg" alt="Menu" />
+            </a>
         </div>
+        <a href="javascript:void(0)" class="close-button">Close</a>
     </div>
 </header>
+
+<script>
+    let header = document.querySelector("header")
+    let menuButton = header.querySelector("a.menu")
+    let closeButton = header.querySelector("a.close-button")
+
+    menuButton.addEventListener("click", e => {
+        e.preventDefault()
+        header.classList.add("active")
+    })
+
+    closeButton.addEventListener("click", e => {
+        e.preventDefault()
+        header.classList.remove("active")
+    })
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 1000) {
+            header.classList.remove("active")
+        }
+    })
+</script>
