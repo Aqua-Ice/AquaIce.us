@@ -1,0 +1,44 @@
+section.booking {
+	padding: 110px;
+	text-align: center;
+
+	div.contact-card {
+		display: inline-block;
+		padding: 30px;
+		margin: 10px 70px;
+	}
+    div.sidebyside {
+        display: inline-block;
+        img {
+            display: block;
+            float: left;
+            margin-top: 7px;
+            margin-right: 10px;
+            height: 40px;
+        }
+        p {
+            display: block;
+            float: left;
+            font-family: "Red Hat Display";
+            font-weight: 900;
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 40px;
+        }
+    }
+    .info {
+        display: block;
+        font-family: "Red Hat Display";
+        font-weight: 300;
+        font-size: 45px;
+        line-height: 40px;
+        text-decoration: none;
+        color: #000;
+        margin: 0;
+        &.subtitle {
+            line-height: 27px;
+            font-size: 30px;
+        }
+        &a:hover { color: #344 }
+    }
+}
