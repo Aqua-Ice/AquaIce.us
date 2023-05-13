@@ -28,4 +28,4 @@ jobs:
               sudo apt-get -y install rsync
               echo "${{ secrets.SERVER_SSH_KEY }}" > private_key
               chmod 600 private_key
-              rsync -avz --delete -e "ssh -i private_key -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" dist/ ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/home/jcb/sites/test.aquaice.us
+              rsync -avz --delete -e "ssh -i private_key -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" dist/ ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/home/jcb/sites/us.aquaice
