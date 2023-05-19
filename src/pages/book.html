@@ -28,20 +28,52 @@
 		<main>
 			@@include('header.html', { "fixed": "" }) @@include('head.html', { "title": "Book Us", "subtitle": "" })
 			<section class="booking">
-				<h1 class="package-title">Event Cart Package - $390</h1>
+				<h1 class="package-title">Event Packages</h1>
+                <div class="package-sidebyside">
+                    <div class="sidebyside-pkg">
+                        <div class="img" style="background-image:url('../assets/cart_photo_2.jpg')"></div>
+                        <h2 class="package-name">Cart Includes:</h2>
+                        <ul>
+                            <li>4 flavors from inventory</li>
+                            <li>Experienced server for 2 hours</li>
+                            <li>Up to 100 guests</li>
+                        </ul>
+                        <strong class="package-includes">Base Pricing:</strong>
+                        <ul>
+                            <li>&lt; 100 guests - $390</li>
+                        </ul>
+                        <strong class="package-includes">Fees:</strong>
+                        <ul>
+                            <li>50&cent; per mile round trip from Delta, OH</li>
+                            <li>$100 peak season fee (Jun-Sept)</li>
+                        </ul>
+                    </div>
+                    <div class="sidebyside-pkg">
+                        <div class="img" style="background-image:url('../assets/trailer_photo_2.jpg')"></div>
+                        <h2 class="package-name">Trailer Includes:</h2>
+                        <ul>
+                            <li>ALL flavors in inventory</li>
+                            <li>Experienced server(s) for 2 hours</li>
+                        </ul>
+                        <strong class="package-includes">Base Pricing:</strong>
+                        <ul>
+                            <li>&lt; 100 guests - $450</li>
+                            <li>&lt; 200 guests - $825</li>
+                            <li>&lt; 300 guests - $1200</li>
+                        </ul>
+                        <strong class="package-includes">Fees:</strong>
+                        <ul>
+                            <li>50&cent; per mile round trip from Delta, OH</li>
+                            <li>$100 peak season fee (Jun-Sept)</li>
+                        </ul>
+                    </div>
+                </div>
 				<div class="booking-section">
-					<div class="sidebyside">
-						<img src="../assets/icons/confetti.svg" />
-						<p>Includes</p>
-					</div>
-					<div class="list">
-						<ul>
-							<li>Your choice of 4 flavors from our current inventory</li>
-							<li>An experienced server for 2 hours</li>
-						</ul>
-					</div>
-				</div>
-				<div class="booking-section">
+                    <br>
+                    <div class="msg">
+                        <a href="/contact">Contact us</a> for a custom quote for your event!
+                    </div>
+                    <br><br><br>
 					<div class="sidebyside">
 						<img src="../assets/icons/plus.svg" />
 						<p>Add-ons</p>
@@ -49,8 +81,9 @@
 					<div class="list">
 						<ul>
 							<li>Need more time? [$50 / half hour]</li>
-							<li>Need 2 servers? [$60 / hour]</li>
-							<li>Additional guests? [$1 each]</li>
+							<li>Additional guests? [$1.25 each]</li>
+							<li>$.50 per mile round trip from Delta, OH</li>
+							<li>+$100 peak season fee (Jun-Sept)</li>
 						</ul>
 					</div>
 				</div>
@@ -66,7 +99,6 @@
 							<li>$100 of your deposit is refundable with 15-19 days notice of cancellation</li>
 							<li>No refunds within 14 days of event date</li>
 						</ul>
-						$0.50 charged per mile round trip from Delta, OH
 					</div>
 				</div>
 
